@@ -13,6 +13,7 @@ for i in a:
                     lst.append(K[0:-2])
                 else:
                     lst.append(K)
+                    print("rishi")
                 
         
     
