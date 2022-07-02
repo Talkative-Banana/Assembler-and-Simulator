@@ -1,0 +1,7 @@
+f =open("Text.txt","r")
+main_lst = []
+for i in f:
+    content = f.readline()
+    q = content.split(' ')
+    main_lst.append(q)
+    print(q)
