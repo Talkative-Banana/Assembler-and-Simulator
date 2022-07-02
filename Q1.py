@@ -263,3 +263,4 @@ def addition(reg_x,reg_y,reg_z):
         else:
             carry=add(reg_x[i],reg_y[i],reg_z[i],carry)
 # def subtract():
+
