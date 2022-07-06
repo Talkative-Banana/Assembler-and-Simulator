@@ -241,12 +241,23 @@ def Radix_A_to_B(a,b,r):
     return emp_str_fin
 
 #Reading the file
-inp=open("Text.txt",'w')
+Inp=open("Text.txt",'w')
 out=open("Output.txt",'w')
 var_count=0
 inst_count=0
 Inst_count=0
 hlt_count=0
+for i in range(0,256):
+    try:
+        a=input()
+    except:
+        pass
+    Inp.write(a)
+    Inp.write('\n')
+
+Inp.close()
+inp=open("Text.txt",'r')
+
 for line in inp:
     if line[0:3]=='var':
         var_count+=1
@@ -257,10 +268,11 @@ for line in inp:
             hlt_count+=1
 
 # print(inst_count)
-# inp=open("Text.txt",'r')
+inp.close()
+inp=open("Text.txt",'r')
 count=0
+
 for i in inp:
-    # print("HLO")  
     Str=''
     if(i==''): # Empty line
         pass
@@ -281,11 +293,10 @@ for i in inp:
 
         else:
             pass
-
+        
         if(hlt_count!=1):
             print(f'Invalid number of halt(s) {hlt_count}')
             break
-
         if(Type_A_Ins(lst,count)!='NULL'):
             out.write(Type_A_Ins(lst,count))  
             out.write('\n')
@@ -331,6 +342,15 @@ for i in inp:
 
 out.close()
 inp.close()
+Out=open("Output.txt",'r')
+
+for i in Out:
+    
+    print(i)
+
+
+Out.close()
+
 
 # Simulator 
 
