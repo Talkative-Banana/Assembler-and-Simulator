@@ -1,2 +1,1 @@
-# Assignment
-CO Project Assignment
+# Assembler and Simulator
